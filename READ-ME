@@ -1,0 +1,26 @@
+This version of TopTrumps will be played against the computer.
+A random number is generated from the 151 pokemon cards.
+When propmted ask the user which stat they would like to use (id,height or weight)
+Compare the player's and opponents statto decide who wins. 
+
+
+MOSCOW
+
+**Must:**
+
+Generate a random number
+Create dictionary from API
+Link a number to an ID from dictionary
+Designate number for opponent
+Ask the player to choose a stat from specific categories
+Compare chosen identical stat with opponent and choose winner
+Message output for win, lose or draw
+
+**Could:**
+Use different API
+Deal multiple cards at once, player chooses which one they want to use
+Multiple rounds
+If a draw occurs, players are assigned a new card and compare using same stat category.
+
+**Should:**
+Create and define class, players and pokemon game
