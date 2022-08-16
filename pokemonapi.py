@@ -1,25 +1,27 @@
 import random
+
+
 import requests
- 
+
+# Generate a random number between 1-151 
+
+def stack_pokemon():
+    pokemon_number = random.randint(1, 151)
+url = 'https://pokeapi.co/api/v2/pokemon/{}/'.format(pokemon_number) 
+pokemon = response.json()
+
+return​{'name': pokemon['name'], 'id': pokemon['id'],
+'height': pokemon['height'], 'weight': pokemon['weight'], 'speed' :pokemon['speed'],}
+
+requests = requests.get('https://pokeapi.co/api/v2/pokemon/{}/'.format(player1))
+
 response1 = requests.get('https://pokeapi.co/api/v2/pokemon/{}/'.format(player1))
 response2 = requests.get('https://pokeapi.co/api/v2/pokemon/{}/'.format(player2))
- 
-player1 = response1.json()
-player2 = response2.json()
- 
-def print_card(card):  # this is temporary until ive checked
-    
-#game_stat
 
-        print("Pokemon name: " + card.name)
-        print("height: " + str(card.height))
-        print("weight: " + str(card.weight))
-        print("id: " + str(card.id))
+def player():
+    player1=stack_pokemon()
+
         
-# Generate a random number between 1-151 
-    number = randint(1, 151)
-
-
 category = input('Choose your game_stat (id, height, weight or speed): ')
 
 #Checks the stats of the two players against each other and prints accordingly
@@ -35,15 +37,15 @@ elif player1['height'] == player2['height']:
      
 category = input('Choose your game_stat (id, height, weight or speed): ')
     
-    elif category == 'weight':
-    if player1['weight'] > player2['weight']:
-     print('You win!')
-    elif player1['weight'] < player2['weight']:
+elif category == 'weight':
+if player1['weight'] > player2['weight']:
+    print('You win!')
+elif player1['weight'] < player2['weight']:
      print('You lose!')
-    elif player1['weight'] == player2['weight']:
+elif player1['weight'] == player2['weight']:
      print('You draw! Play again')
 
-    elif category == 'id':
+elif category == 'id':
     if player1['id'] > player2['id']:
      print('You win!')
     elif player1['id'] < player2['id']:
@@ -74,8 +76,6 @@ print("Hello " + player1name + ", get ready to enter the world of Pokemon!\n")
 player2name = "Computer"
 print("You are playing against " + player2name +  ", get ready...\n")
 
-
-game = Game(player1, computer)
 
 # Keep alternating turns until someone wins
 # Whoever wins the round gets to pick another trump
